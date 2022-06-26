@@ -1,0 +1,28 @@
+body{
+    display: grid;
+    grid-template-areas:
+        "header"
+        "presentation"
+        "skills"
+        "portfolio"
+        "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-areas: 1fr 3fr 3fr 3fr 1fr;
+    .presentation{
+        grid-area: presentation;
+        width: 100%;
+        height: 50rem;
+        background-color: #333333;
+    }
+    .skills{
+        @extend .presentation;
+        grid-area: skills;
+        background-color: #444444
+    }
+    .portfolio{
+        @extend .presentation;
+        grid-area: portfolio;
+        background-color: #555555;
+    }
+}

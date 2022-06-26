@@ -1,0 +1,28 @@
+footer{
+    background-color: $firstColor;
+    padding: 10rem;
+    .footer-title{
+        color: $secondColor;
+        padding: .5rem;
+        font-weight: 700;
+        width: fit-content;
+    }
+    .contact{
+        &-item{
+            font-size: 1.5rem;
+            color: $secondColor;
+            a{
+                @extend .contact-item;
+                text-decoration: none
+            }
+        }
+    }
+    .social{
+        &-item{
+            @extend .contact-item;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}

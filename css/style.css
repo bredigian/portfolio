@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header {
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.header .navbar-logo {
+  width: 15rem;
+}
+.header .navbar-logo img {
+  width: 100%;
+}
+.header .navbar ul {
+  list-style-type: none;
+}
+.header .navbar ul li {
+  padding: 0.5rem 2rem;
+  border-top: solid #FFFFFF 0.5rem;
+  border-bottom: solid #FFFFFF 0.5rem;
+  transition: all 0.2s;
+}
+.header .navbar ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 2rem;
+}
+.header .navbar ul li:hover {
+  border-bottom: solid #000000 0.5rem;
+  font-weight: 700;
+}
+.header .navbar ul .button-talk {
+  background-color: #000000;
+  border-top: solid #000000 0.5rem;
+  border-bottom: solid #000000 0.5rem;
+  font-weight: 700;
+}
+.header .navbar ul .button-talk a {
+  color: #FFFFFF;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "presentation" "skills" "portfolio" "footer";
+  grid-template-columns: 1fr;
+  grid-template-areas: 1fr 3fr 3fr 3fr 1fr;
+}
+body .presentation, body .portfolio, body .skills {
+  grid-area: presentation;
+  width: 100%;
+  height: 50rem;
+  background-color: #333333;
+}
+body .skills {
+  grid-area: skills;
+  background-color: #444444;
+}
+body .portfolio {
+  grid-area: portfolio;
+  background-color: #555555;
+}
+
+footer {
+  background-color: #000000;
+  padding: 10rem;
+}
+footer .footer-title {
+  color: #FFFFFF;
+  padding: 0.5rem;
+  font-weight: 700;
+  width: fit-content;
+}
+footer .contact-item, footer .social-item, footer .social-item a, footer .contact-item a {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
+footer .contact-item a, footer .social-item a {
+  text-decoration: none;
+}
+footer .social-item a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
