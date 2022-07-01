@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("http://fonts.cdnfonts.com/css/product-sans");
 * {
   padding: 0;
   margin: 0;
@@ -7,11 +8,15 @@
 }
 
 * {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Product Sans", sans-serif;
 }
 
 html {
   font-size: 62.5%;
+}
+html ::selection {
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .header {
@@ -59,20 +64,79 @@ body {
   grid-template-areas: "header" "presentation" "skills" "portfolio" "footer";
   grid-template-columns: 1fr;
   grid-template-areas: 1fr 3fr 3fr 3fr 1fr;
+  justify-items: center;
 }
-body .presentation, body .portfolio, body .skills {
+body .presentation {
   grid-area: presentation;
+}
+body .presentation-info h1 {
+  color: #000000;
+  font-size: 5rem;
+  font-weight: 700;
+}
+body .presentation-info p {
+  color: #000000;
+  font-size: 3.5rem;
+}
+body .presentation-img {
+  width: 50rem;
+  border: solid #000000 1rem;
+  background-color: #000000;
+  border-radius: 100%;
+}
+body .presentation-img img {
+  border-radius: 100%;
   width: 100%;
-  height: 50rem;
-  background-color: #333333;
 }
 body .skills {
   grid-area: skills;
-  background-color: #444444;
+}
+body .skills-info {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 3rem;
+  font-size: 3.5rem;
+}
+body .skills-img {
+  width: 60rem;
+}
+body .skills-img img {
+  width: 15rem;
+}
+body .skills-img #img-css {
+  width: 11.5rem;
+}
+body .skills-img #img-nodejs {
+  width: 10rem;
 }
 body .portfolio {
   grid-area: portfolio;
-  background-color: #555555;
+}
+body .portfolio-info {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 3rem;
+  font-size: 3.5rem;
+}
+body .portfolio-projects__item {
+  border: solid #000000 1rem;
+  border-radius: 1rem;
+  background-color: #000000;
+}
+body .portfolio-projects__item img {
+  width: 75rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+body .portfolio-projects__item .project-description {
+  width: 100%;
+  text-align: center;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 footer {

@@ -9,20 +9,73 @@ body{
     ;
     grid-template-columns: 1fr;
     grid-template-areas: 1fr 3fr 3fr 3fr 1fr;
+    justify-items: center;
     .presentation{
         grid-area: presentation;
-        width: 100%;
-        height: 50rem;
-        background-color: #333333;
+        &-info{
+            h1{
+                color: $firstColor;
+                font-size: 5rem;
+                font-weight: 700;
+            }
+            p{
+                color: $firstColor;
+                font-size: 3.5rem;
+            }
+        }
+        &-img{
+            width: 50rem;
+            border: solid $firstColor 1rem;
+            background-color: $firstColor;
+            border-radius: 100%;
+            img{
+                border-radius: 100%;
+                width: 100%;
+            }
+        }
     }
     .skills{
-        @extend .presentation;
         grid-area: skills;
-        background-color: #444444
+        &-info{
+            @include title;
+        }
+        &-img{
+            width: 60rem;
+            img{
+                width: 15rem;
+            }
+            #img-css{
+                width: 11.5rem;
+            }
+            #img-nodejs{
+                width: 10rem;
+            }
+        }
     }
     .portfolio{
-        @extend .presentation;
         grid-area: portfolio;
-        background-color: #555555;
+        &-info{
+            @include title;
+        }
+        &-projects{
+            &__item{
+                border: solid $firstColor 1rem;
+                border-radius: 1rem;
+                background-color: $firstColor;
+                img{
+                    width: 75rem;
+                    border-top-left-radius: 1rem;
+                    border-top-right-radius: 1rem;
+                }
+                .project-description{
+                    width: 100%;
+                    text-align: center;
+                    background-color: $firstColor;
+                    color: $secondColor;
+                    font-size: 2rem;
+                    padding: 1rem;
+                }
+            }
+        }
     }
 }

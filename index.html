@@ -10,7 +10,7 @@
     <title>Gianluca Bredice - Portfolio</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header w-100">
         <nav class="navbar d-flex w-100 align-items-center justify-content-around">
             <div class="navbar-logo">
                 <img src="./img/logo-gianlucaBredice.png" alt="Gianluca Bredice">
@@ -19,18 +19,41 @@
                 <li><a href="#presentation">Presentacion</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li class="button-talk"><a href="#">¡Hablemos!</a></li>
+                <li class="button-talk"><a href="#contact">¡Hablemos!</a></li>
             </ul>
         </nav>
     </header>
-    <div id="presentation" class="presentation">
-
+    <div id="presentation" class="presentation d-flex align-items-center w-100 justify-content-around p-5">
+        <div class="presentation-info d-flex flex-column align-items-center text-center">
+            <h1>Hola, mi nombre es Gianluca Bredice</h1>
+            <p>Soy <b>Desarrollador Web</b>. Tengo 20 años<br>y soy de Argentina, especificamente de La Plata.</p>
+        </div>
+        <div class="presentation-img">
+            <img src="./img/gianluca.jpg" alt="Gianluca Bredice">
+        </div>
     </div>
-    <div id="skills" class="skills">
-
+    <div id="skills" class="skills d-flex flex-row-reverse w-100 align-items-center justify-content-around p-5">
+        <div class="skills-info">Habilidades</div>
+        <div class="skills-img d-flex flex-wrap align-items-center justify-content-around gap-5">
+            <img src="./img/skills/html.png" alt="">
+            <img id="img-css" src="./img/skills/css.png" alt="">
+            <img src="./img/skills/js-logo.webp" alt="">
+            <img src="./img/skills/bootstrap.png" alt="">
+            <img src="./img/skills/sass.png" alt="">
+            <img id="img-nodejs" src="./img/skills/nodejs.png" alt="">
+        </div>
     </div>
-    <div id="portfolio" class="portfolio">
-
+    <div id="portfolio" class="portfolio d-flex align-items-center w-100 justify-content-around p-5">
+        <div class="portfolio-info">Proyectos</div>
+        <div class="portfolio-projects">
+            <div class="portfolio-projects__item d-flex flex-column align-items-center gap-2">
+                <a href="https://ninezetateam.netlify.app" target="_blank"><img src="./img/projects/project-9z.png" alt=""></a>
+                <div class="project-description">Web Site 9z Team</div>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <div class="contact-info">Redes</div>
     </div>
     <footer class="d-flex w-100 align-items-start justify-content-around">
         <div class="contact d-flex flex-column gap-3">
@@ -41,7 +64,7 @@
             </div>
             <div class="contact-item d-flex gap-2 align-items-center">
                 <i class="fa-brands fa-whatsapp"></i>
-                <a href="tel:+5492281599471">WhatsApp</a>
+                <a href="https://wa.me/2281599471">WhatsApp</a>
             </div>
         </div>
         <div class="social d-flex flex-column gap-3">

@@ -1,0 +1,7 @@
+@mixin title{
+    background-color: $firstColor;
+    color: $secondColor;
+    font-weight: 700;
+    padding: 3rem;
+    font-size: 3.5rem;
+}
