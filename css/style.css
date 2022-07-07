@@ -15,12 +15,16 @@ html {
   font-size: 62.5%;
 }
 html ::selection {
-  background-color: #FFFFFF;
+  background-color: #F0F0F0;
   color: #000000;
 }
 
+body {
+  background-color: #F0F0F0;
+}
+
 .header {
-  background-color: #FFFFFF;
+  background-color: #F0F0F0;
   position: sticky;
   top: 0;
   z-index: 5;
@@ -36,8 +40,8 @@ html ::selection {
 }
 .header .navbar ul li {
   padding: 0.5rem 2rem;
-  border-top: solid #FFFFFF 0.5rem;
-  border-bottom: solid #FFFFFF 0.5rem;
+  border-top: solid #F0F0F0 0.5rem;
+  border-bottom: solid #F0F0F0 0.5rem;
   transition: all 0.2s;
 }
 .header .navbar ul li a {
@@ -56,14 +60,14 @@ html ::selection {
   font-weight: 700;
 }
 .header .navbar ul .button-talk a {
-  color: #FFFFFF;
+  color: #F0F0F0;
 }
 
 body {
   display: grid;
-  grid-template-areas: "header" "presentation" "skills" "portfolio" "footer";
+  grid-template-areas: "header" "presentation" "skills" "portfolio" "contact" "footer";
   grid-template-columns: 1fr;
-  grid-template-areas: 1fr 3fr 3fr 3fr 1fr;
+  grid-template-rows: 1fr 5fr 5fr 5fr 3fr 2fr;
   justify-items: center;
 }
 body .presentation {
@@ -93,29 +97,23 @@ body .skills {
 }
 body .skills-info {
   background-color: #000000;
-  color: #FFFFFF;
+  color: #F0F0F0;
   font-weight: 700;
   padding: 3rem;
   font-size: 3.5rem;
 }
 body .skills-img {
-  width: 60rem;
+  width: 75rem;
 }
 body .skills-img img {
-  width: 15rem;
-}
-body .skills-img #img-css {
-  width: 11.5rem;
-}
-body .skills-img #img-nodejs {
-  width: 10rem;
+  width: 100%;
 }
 body .portfolio {
   grid-area: portfolio;
 }
 body .portfolio-info {
   background-color: #000000;
-  color: #FFFFFF;
+  color: #F0F0F0;
   font-weight: 700;
   padding: 3rem;
   font-size: 3.5rem;
@@ -134,9 +132,31 @@ body .portfolio-projects__item .project-description {
   width: 100%;
   text-align: center;
   background-color: #000000;
-  color: #FFFFFF;
+  color: #F0F0F0;
   font-size: 2rem;
   padding: 1rem;
+}
+body .contact {
+  grid-area: contact;
+}
+body .contact-info {
+  background-color: #000000;
+  color: #F0F0F0;
+  font-weight: 700;
+  padding: 3rem;
+  font-size: 3.5rem;
+}
+body .contact-social {
+  width: 75rem;
+}
+body .contact-social__item {
+  text-decoration: none;
+  color: #000000;
+  font-size: 15rem;
+  transition: all 0.2s;
+}
+body .contact-social__item:hover {
+  transform: scale(1.2);
 }
 
 footer {
@@ -144,14 +164,14 @@ footer {
   padding: 10rem;
 }
 footer .footer-title {
-  color: #FFFFFF;
+  color: #F0F0F0;
   padding: 0.5rem;
   font-weight: 700;
   width: fit-content;
 }
 footer .contact-item, footer .social-item, footer .social-item a, footer .contact-item a {
   font-size: 1.5rem;
-  color: #FFFFFF;
+  color: #F0F0F0;
 }
 footer .contact-item a, footer .social-item a {
   text-decoration: none;

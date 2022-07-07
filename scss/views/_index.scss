@@ -5,10 +5,11 @@ body{
         "presentation"
         "skills"
         "portfolio"
+        "contact"
         "footer"
     ;
     grid-template-columns: 1fr;
-    grid-template-areas: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr 5fr 5fr 3fr 2fr;
     justify-items: center;
     .presentation{
         grid-area: presentation;
@@ -40,15 +41,9 @@ body{
             @include title;
         }
         &-img{
-            width: 60rem;
+            width: 75rem;
             img{
-                width: 15rem;
-            }
-            #img-css{
-                width: 11.5rem;
-            }
-            #img-nodejs{
-                width: 10rem;
+                width: 100%;
             }
         }
     }
@@ -74,6 +69,24 @@ body{
                     color: $secondColor;
                     font-size: 2rem;
                     padding: 1rem;
+                }
+            }
+        }
+    }
+    .contact{
+        grid-area: contact;
+        &-info{
+            @include title;
+        }
+        &-social{
+            width: 75rem;
+            &__item{
+                text-decoration: none;
+                color: $firstColor;
+                font-size: 15rem;
+                transition: all .2s;
+                &:hover{
+                    transform: scale(1.2);
                 }
             }
         }
