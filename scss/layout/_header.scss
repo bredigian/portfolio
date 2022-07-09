@@ -1,39 +1,110 @@
-.header{
-    background-color: $secondColor;
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    .navbar{
-        &-logo{
-            width: 15rem;
-            img{
-                width: 100%;
+@media(min-width: 0px){
+    .header-mobile{
+        background-color: $secondColor;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        padding: 2rem;
+        .navbar{
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li{
+                    a{
+                        .icon{
+                            width: 3rem;
+                        }
+                        .logo{
+                            width: 10rem;
+                        }
+                    }
+                }
             }
         }
-        ul{
-            list-style-type: none;
-            li{
-                padding: .5rem 2rem;
-                border-top: solid $secondColor .5rem;
-                border-bottom: solid $secondColor .5rem;
-                transition: all .2s;
-                a{
-                    text-decoration: none;
-                    color: $firstColor;
-                    font-size: 2rem;
-                }
-                &:hover{
-                    border-bottom: solid $firstColor .5rem;
-                    font-weight: 700;
+    }
+}
+@media(min-width: 768px){
+    .header-tabletDesktop{
+        background-color: $secondColor;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        .navbar{
+            &-logo{
+                width: 15rem;
+                img{
+                    width: 100%;
                 }
             }
-            .button-talk{
-                background-color: $firstColor;
-                border-top: solid $firstColor .5rem;
-                border-bottom: solid $firstColor .5rem;
-                font-weight: 700;
-                a{
-                    color: $secondColor;
+            ul{
+                list-style-type: none;
+                li{
+                    padding: .5rem 2rem;
+                    border-top: solid $secondColor .5rem;
+                    border-bottom: solid $secondColor .5rem;
+                    transition: all .2s;
+                    a{
+                        text-decoration: none;
+                        color: $firstColor;
+                        font-size: 2rem;
+                    }
+                    &:hover{
+                        border-bottom: solid $firstColor .5rem;
+                        font-weight: 700;
+                    }
+                }
+                .button-talk{
+                    background-color: $firstColor;
+                    border-top: solid $firstColor .5rem;
+                    border-bottom: solid $firstColor .5rem;
+                    font-weight: 700;
+                    a{
+                        color: $secondColor;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px){
+    .header-tabletDesktop{
+        background-color: $secondColor;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        .navbar{
+            &-logo{
+                width: 15rem;
+                img{
+                    width: 100%;
+                }
+            }
+            ul{
+                list-style-type: none;
+                li{
+                    padding: .5rem 2rem;
+                    border-top: solid $secondColor .5rem;
+                    border-bottom: solid $secondColor .5rem;
+                    transition: all .2s;
+                    a{
+                        text-decoration: none;
+                        color: $firstColor;
+                        font-size: 2rem;
+                    }
+                    &:hover{
+                        border-bottom: solid $firstColor .5rem;
+                        font-weight: 700;
+                    }
+                }
+                .button-talk{
+                    background-color: $firstColor;
+                    border-top: solid $firstColor .5rem;
+                    border-bottom: solid $firstColor .5rem;
+                    font-weight: 700;
+                    a{
+                        color: $secondColor;
+                    }
                 }
             }
         }

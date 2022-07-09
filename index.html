@@ -8,10 +8,22 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Gianluca Bredice - Portfolio</title>
 </head>
 <body>
-    <header class="header w-100 d-flex align-items-center">
+    <header class="header-mobile only-mobile w-100">
+        <nav class="navbar w-100">
+            <ul class="d-flex align-items-center w-100 justify-content-around">
+                <li><a href="#presentation"><img class="icon" src="./img/icons/me.png" alt=""></a></li>
+                <li><a href="#skills"><img class="icon" src="./img/icons/skills.png" alt=""></a></li>
+                <li><a href="./index.html"><img class="logo" src="./img/logo-gianlucaBredice.png" alt="Gianluca Bredice"></a></li>
+                <li><a href="#portfolio"><img class="icon" src="./img/icons/portfolio.png" alt=""></a></li>
+                <li><a href="#contact"><img class="icon" src="./img/icons/contact.png" alt=""></a></li>
+            </ul>
+        </nav>
+    </header>
+    <header class="header-tabletDesktop tablet-desktop w-100 d-flex align-items-center">
         <nav class="navbar d-flex w-100 align-items-center justify-content-around">
             <div class="navbar-logo">
                 <img src="./img/logo-gianlucaBredice.png" alt="Gianluca Bredice">
@@ -24,41 +36,49 @@
             </ul>
         </nav>
     </header>
-    <div id="presentation" class="presentation d-flex align-items-center w-100 justify-content-around p-5">
-        <div class="presentation-info d-flex flex-column align-items-center text-center" data-aos="fade-right" data-aos-delay="250">
+    <div id="presentation" class="presentation d-flex flex-column align-items-center w-100 justify-content-around p-4">
+        <div class="presentation-info d-flex flex-column align-items-center text-center justify-content-center gap-4" data-aos="zoom-in" data-aos-delay="250">
             <h1>Hola, mi nombre es Gianluca Bredice</h1>
             <p>Soy <b>Desarrollador Web</b>. Tengo 20 años<br>y soy de Argentina, especificamente de La Plata.</p>
         </div>
-        <div class="presentation-img" data-aos="fade-left" data-aos-delay="750">
+        <div class="presentation-img" data-aos="zoom-in" data-aos-delay="750">
             <img src="./img/gianluca.jpg" alt="Gianluca Bredice">
         </div>
     </div>
-    <div id="skills" class="skills d-flex flex-row-reverse w-100 align-items-center justify-content-around p-5">
-        <div class="skills-info" data-aos="fade-left" data-aos-delay="250">Habilidades</div>
-        <div class="skills-img" data-aos="fade-right" data-aos-delay="750">
+    <div id="skills" class="skills d-flex flex-column w-100 align-items-center justify-content-around p-4">
+        <div class="skills-info" data-aos="zoom-in" data-aos-delay="250">Habilidades</div>
+        <div class="skills-img__mobile only-mobile d-flex flex-column gap-5 align-items-center" data-aos="zoom-in" data-aos-delay="750">
+            <img id="img-html" src="./img/skills/html.png" alt="">
+            <img id="img-css" src="./img/skills/css.png" alt="">
+            <img id="img-js" src="./img/skills/js-logo.webp" alt="">
+            <img id="img-bootstrap" src="./img/skills/bootstrap.png" alt="">
+            <img id="img-sass" src="./img/skills/sass.png" alt="">
+            <img id="img-nodejs" src="./img/skills/nodejs.png" alt="">
+        </div>
+        <div class="skills-img tablet-desktop" data-aos="zoom-in" data-aos-delay="750">
             <img src="./img/skills/allSkills.png" alt="Skills">
         </div>
     </div>
-    <div id="portfolio" class="portfolio d-flex align-items-center w-100 justify-content-around p-5">
-        <div class="portfolio-info" data-aos="fade-right" data-aos-delay="250">Proyectos</div>
+    <div id="portfolio" class="portfolio d-flex flex-column align-items-center w-100 justify-content-around p-4">
+        <div class="portfolio-info" data-aos="zoom-in" data-aos-delay="250">Proyectos</div>
         <div class="portfolio-projects">
-            <div class="portfolio-projects__item d-flex flex-column align-items-center gap-2" data-aos="flip-right" data-aos-delay="750" data-aos-duration="750">
+            <div class="portfolio-projects__item d-flex flex-column align-items-center gap-2" data-aos="zoom-in" data-aos-delay="750">
                 <a href="https://ninezetateam.netlify.app" target="_blank"><img src="./img/projects/project-9z.png" alt=""></a>
                 <div class="project-description">Web Site 9z Team</div>
             </div>
         </div>
     </div>
-    <div id="contact" class="contact d-flex flex-row-reverse align-items-center justify-content-around w-100 p-5">
-        <div class="contact-info" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="250">Redes</div>
-        <div class="contact-social d-flex align-items-center justify-content-center justify-content-around" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="750">
+    <div id="contact" class="contact d-flex flex-column align-items-center justify-content-around w-100 p-4">
+        <div class="contact-info" data-aos="zoom-in" data-aos-delay="250">Redes</div>
+        <div class="contact-social d-flex align-items-center justify-content-center justify-content-around w-100" data-aos="zoom-in" data-aos-delay="750">
             <a class="contact-social__item" href="https://wa.me/2281599471" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             <a class="contact-social__item" href="http://www.instagram.com/bredigian" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a class="contact-social__item" href="http://www.twitter.com/bredigian" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a class="contact-social__item" href="https://www.linkedin.com/in/gianluca-bredice-62a65b230/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="contact-social__item" href="https://www.linkedin.com/in/gianluca-bredice-62a65b230/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </div>
     <footer class="d-flex w-100 align-items-start justify-content-around">
-        <div class="contact d-flex flex-column gap-3" data-aos="fade-right" data-aos-delay="250">
+        <div class="contact d-flex flex-column gap-3" data-aos="zoom-in" data-aos-delay="250">
             <h2 class="footer-title">Contacto</h2>
             <div class="contact-item">
                 <i class="fa-solid fa-envelope"></i>
@@ -69,7 +89,7 @@
                 <a href="https://wa.me/2281599471">WhatsApp</a>
             </div>
         </div>
-        <div class="social d-flex flex-column gap-3" data-aos="fade-left" data-aos-delay="250">
+        <div class="social d-flex flex-column gap-3" data-aos="zoom-in" data-aos-delay="250">
             <h2 class="footer-title">Redes Sociales</h2>
             <div class="social-item d-flex gap-2 align-items-center">
                 <i class="fa-brands fa-linkedin"></i>

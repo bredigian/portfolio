@@ -1,0 +1,16 @@
+@media(min-width: 0px){
+    .only-mobile{
+        display: flex!important;
+    }
+    .tablet-desktop{
+        display: none !important;
+    }
+}
+@media(min-width: 768px){
+    .only-mobile{
+        display: none !important;
+    }
+    .tablet-desktop{
+        display: flex !important;
+    }
+}
