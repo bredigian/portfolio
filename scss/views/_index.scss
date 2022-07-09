@@ -26,7 +26,8 @@
                 }
             }
             &-img{
-                width: 30rem;
+                width: 100%;
+                max-width: 473px;
                 border: solid $firstColor 1rem;
                 background-color: $firstColor;
                 border-radius: 100%;
@@ -110,8 +111,71 @@
     }
 }
 @media(min-width: 768px){
-
+    body{
+        grid-template-rows: 1fr 7fr 7fr 6fr 4fr 2fr;
+        .skills{
+            &-img{
+                width: 60rem;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .portfolio{
+            &-projects{
+                &__item{
+                    img{
+                        width: 50rem;
+                    }
+                }
+            }
+        }
+        .contact{
+            &-social{
+                &__item{
+                    font-size: 8rem;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 1200px){
-
+    body{
+        .presentation{
+            flex-direction: row !important;
+            &-info{
+                h1{
+                    font-size: 6rem;
+                }
+                p{
+                    font-size: 3rem;
+                }
+            }
+        }
+        .skills{
+            flex-direction: row-reverse !important;
+            &-img{
+                width: 80rem;
+            }
+        }
+        .portfolio{
+            flex-direction: row !important;
+            &-projects{
+                &__item{
+                    img{
+                        width: 80rem;
+                    }
+                }
+            }
+        }
+        .contact{
+            flex-direction: row-reverse !important;
+            &-social{
+                width: 800px !important;
+                &__item{
+                    font-size: 10rem;
+                }
+            }
+        }
+    }
 }

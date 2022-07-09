@@ -30,14 +30,17 @@
         position: sticky;
         top: 0;
         z-index: 5;
+        padding: 2rem;
         .navbar{
             &-logo{
-                width: 15rem;
+                width: 10rem;
                 img{
                     width: 100%;
                 }
             }
             ul{
+                margin: 0;
+                padding: 0;
                 list-style-type: none;
                 li{
                     padding: .5rem 2rem;
@@ -47,7 +50,7 @@
                     a{
                         text-decoration: none;
                         color: $firstColor;
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                     }
                     &:hover{
                         border-bottom: solid $firstColor .5rem;

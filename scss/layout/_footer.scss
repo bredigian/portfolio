@@ -8,23 +8,32 @@
             font-weight: 700;
             width: fit-content;
         }
-        .contact{
+        .footerContact{
             &-item{
                 font-size: 1.5rem;
                 color: $secondColor;
                 a{
-                    @extend .contact-item;
+                    font-size: 1.5rem;
+                    color: $secondColor;
                     text-decoration: none
                 }
             }
         }
         .social{
             &-item{
-                @extend .contact-item;
+                font-size: 1.5rem;
+                color: $secondColor;
                 a{
+                    font-size: 1.5rem;
+                    color: $secondColor;
                     text-decoration: none;
                 }
             }
         }
+    }
+}
+@media(min-width: 1200px){
+    footer{
+        padding: 10rem;
     }
 }

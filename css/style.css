@@ -65,14 +65,17 @@ body {
     position: sticky;
     top: 0;
     z-index: 5;
+    padding: 2rem;
   }
   .header-tabletDesktop .navbar-logo {
-    width: 15rem;
+    width: 10rem;
   }
   .header-tabletDesktop .navbar-logo img {
     width: 100%;
   }
   .header-tabletDesktop .navbar ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
   }
   .header-tabletDesktop .navbar ul li {
@@ -84,7 +87,7 @@ body {
   .header-tabletDesktop .navbar ul li a {
     text-decoration: none;
     color: #000000;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .header-tabletDesktop .navbar ul li:hover {
     border-bottom: solid #000000 0.5rem;
@@ -162,7 +165,8 @@ body {
     font-size: 2rem;
   }
   body .presentation-img {
-    width: 30rem;
+    width: 100%;
+    max-width: 473px;
     border: solid #000000 1rem;
     background-color: #000000;
     border-radius: 100%;
@@ -251,6 +255,55 @@ body {
     transform: scale(1.2);
   }
 }
+@media (min-width: 768px) {
+  body {
+    grid-template-rows: 1fr 7fr 7fr 6fr 4fr 2fr;
+  }
+  body .skills-img {
+    width: 60rem;
+  }
+  body .skills-img img {
+    width: 100%;
+  }
+  body .portfolio-projects__item img {
+    width: 50rem;
+  }
+  body .contact-social__item {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 1200px) {
+  body .presentation {
+    flex-direction: row !important;
+  }
+  body .presentation-info h1 {
+    font-size: 6rem;
+  }
+  body .presentation-info p {
+    font-size: 3rem;
+  }
+  body .skills {
+    flex-direction: row-reverse !important;
+  }
+  body .skills-img {
+    width: 80rem;
+  }
+  body .portfolio {
+    flex-direction: row !important;
+  }
+  body .portfolio-projects__item img {
+    width: 80rem;
+  }
+  body .contact {
+    flex-direction: row-reverse !important;
+  }
+  body .contact-social {
+    width: 800px !important;
+  }
+  body .contact-social__item {
+    font-size: 10rem;
+  }
+}
 @media (min-width: 0px) {
   footer {
     background-color: #000000;
@@ -262,15 +315,28 @@ body {
     font-weight: 700;
     width: fit-content;
   }
-  footer .contact-item, footer .social-item, footer .social-item a, footer .contact-item a {
+  footer .footerContact-item {
     font-size: 1.5rem;
     color: #F0F0F0;
   }
-  footer .contact-item a, footer .social-item a {
+  footer .footerContact-item a {
+    font-size: 1.5rem;
+    color: #F0F0F0;
     text-decoration: none;
   }
+  footer .social-item {
+    font-size: 1.5rem;
+    color: #F0F0F0;
+  }
   footer .social-item a {
+    font-size: 1.5rem;
+    color: #F0F0F0;
     text-decoration: none;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    padding: 10rem;
   }
 }
 
