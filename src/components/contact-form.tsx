@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { ReloadIcon } from '@radix-ui/react-icons';
 import { TForm } from '@/types/form.types';
 import { Textarea } from '@/components/ui/textarea';
@@ -32,9 +31,6 @@ export default function ContactForm() {
       onSubmit={handleSubmit(onSubmit)}
       className='flex w-full max-w-[420px] flex-col items-center gap-4 md:items-end'
     >
-      <Label htmlFor='form' className='md:text-base'>
-        {LANG.ABOUT.LABEL}
-      </Label>
       <div className='grid w-full grid-cols-6 gap-4'>
         <div className='col-span-3 flex flex-col gap-2'>
           <Input

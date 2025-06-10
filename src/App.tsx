@@ -1,6 +1,6 @@
 import Education from '@/sections/education';
+import Footer from './sections/footer';
 import Home from '@/sections/home';
-import Me from '@/sections/me';
 import Projects from '@/sections/projects';
 import Skills from '@/sections/skills';
 
@@ -11,7 +11,7 @@ export default function App() {
       <Projects />
       <Skills />
       <Education />
-      <Me />
+      <Footer />
     </main>
   );
 }
