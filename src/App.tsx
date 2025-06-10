@@ -8,9 +8,9 @@ export default function App() {
   return (
     <main className='mx-auto flex w-full max-w-screen-lg flex-col items-center gap-16'>
       <Home />
-      <Education />
-      <Skills />
       <Projects />
+      <Skills />
+      <Education />
       <Me />
     </main>
   );
