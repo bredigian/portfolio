@@ -1,5 +1,4 @@
 import { TProject } from '@/types/projects.types';
-//Casatomada Images
 import ca1 from '@/assets/screenshots/casatomada/ca-1.jpg';
 import ca2 from '@/assets/screenshots/casatomada/ca-2.jpg';
 import ca3 from '@/assets/screenshots/casatomada/ca-3.jpg';
@@ -10,10 +9,8 @@ import caMobile2 from '@/assets/screenshots/casatomada/mobile/ca-2.jpg';
 import caMobile3 from '@/assets/screenshots/casatomada/mobile/ca-3.jpg';
 import caMobile4 from '@/assets/screenshots/casatomada/mobile/ca-4.jpg';
 import caMobile5 from '@/assets/screenshots/casatomada/mobile/ca-5.jpg';
-//Dolar BNA API Images
 import dba1 from '@/assets/screenshots/dolar-bna-api/dba-1.png';
 import dba1Mobile from '@/assets/screenshots/dolar-bna-api/mobile/dba-1.png';
-//Iluminarte Images
 import il1 from '@/assets/screenshots/iluminarte/il-1.jpg';
 import il2 from '@/assets/screenshots/iluminarte/il-2.jpg';
 import il3 from '@/assets/screenshots/iluminarte/il-3.jpg';
@@ -22,7 +19,6 @@ import ilMobile1 from '@/assets/screenshots/iluminarte/mobile/il-1.jpg';
 import ilMobile2 from '@/assets/screenshots/iluminarte/mobile/il-2.jpg';
 import ilMobile3 from '@/assets/screenshots/iluminarte/mobile/il-3.jpg';
 import ilMobile4 from '@/assets/screenshots/iluminarte/mobile/il-4.jpg';
-//MB Peluqueria Images
 import mbpeluqueriaDesktopLight1 from '@/assets/screenshots/mbpeluqueria/desktop-light-1.png';
 import mbpeluqueriaDesktopLight10 from '@/assets/screenshots/mbpeluqueria/desktop-light-10.png';
 import mbpeluqueriaDesktopLight11 from '@/assets/screenshots/mbpeluqueria/desktop-light-11.png';
@@ -45,7 +41,6 @@ import mbpeluqueriaMobileLight6 from '@/assets/screenshots/mbpeluqueria/mobile/m
 import mbpeluqueriaMobileLight7 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-7.png';
 import mbpeluqueriaMobileLight8 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-8.png';
 import mbpeluqueriaMobileLight9 from '@/assets/screenshots/mbpeluqueria/mobile/mobile-light-9.png';
-//Megallon Images
 import megallon1 from '@/assets/screenshots/megallon/megallon-1.jpg';
 import megallon10 from '@/assets/screenshots/megallon/megallon-10.jpg';
 import megallon11 from '@/assets/screenshots/megallon/megallon-11.jpg';
@@ -72,7 +67,20 @@ import megallonMobile6 from '@/assets/screenshots/megallon/mobile/megallon-6.jpg
 import megallonMobile7 from '@/assets/screenshots/megallon/mobile/megallon-7.jpg';
 import megallonMobile8 from '@/assets/screenshots/megallon/mobile/megallon-8.jpg';
 import megallonMobile9 from '@/assets/screenshots/megallon/mobile/megallon-9.jpg';
-//SG Pharma Images
+import pulvesys1 from '@/assets/screenshots/pulvesys/pulvesys-1.webp';
+import pulvesys2 from '@/assets/screenshots/pulvesys/pulvesys-2.webp';
+import pulvesys3 from '@/assets/screenshots/pulvesys/pulvesys-3.webp';
+import pulvesys4 from '@/assets/screenshots/pulvesys/pulvesys-4.webp';
+import pulvesys5 from '@/assets/screenshots/pulvesys/pulvesys-5.webp';
+import pulvesys6 from '@/assets/screenshots/pulvesys/pulvesys-6.webp';
+import pulvesys7 from '@/assets/screenshots/pulvesys/pulvesys-7.webp';
+import pulvesysMobile1 from '@/assets/screenshots/pulvesys/mobile/pulvesys-1.webp';
+import pulvesysMobile2 from '@/assets/screenshots/pulvesys/mobile/pulvesys-2.webp';
+import pulvesysMobile3 from '@/assets/screenshots/pulvesys/mobile/pulvesys-3.webp';
+import pulvesysMobile4 from '@/assets/screenshots/pulvesys/mobile/pulvesys-4.webp';
+import pulvesysMobile5 from '@/assets/screenshots/pulvesys/mobile/pulvesys-5.webp';
+import pulvesysMobile6 from '@/assets/screenshots/pulvesys/mobile/pulvesys-6.webp';
+import pulvesysMobile7 from '@/assets/screenshots/pulvesys/mobile/pulvesys-7.webp';
 import sg1 from '@/assets/screenshots/sgpharma/sg-1.jpg';
 import sg10 from '@/assets/screenshots/sgpharma/sg-10.jpg';
 import sg2 from '@/assets/screenshots/sgpharma/sg-2.jpg';
@@ -93,6 +101,20 @@ import sgMobile6 from '@/assets/screenshots/sgpharma/mobile/sg-6.jpg';
 import sgMobile7 from '@/assets/screenshots/sgpharma/mobile/sg-7.jpg';
 import sgMobile8 from '@/assets/screenshots/sgpharma/mobile/sg-8.jpg';
 import sgMobile9 from '@/assets/screenshots/sgpharma/mobile/sg-9.jpg';
+
+//Casatomada Images
+
+//Dolar BNA API Images
+
+//Iluminarte Images
+
+//MB Peluqueria Images
+
+//Megallon Images
+
+//SG Pharma Images
+
+//PulveSys Images
 
 export const PROJECTS: TProject[] = [
   {
@@ -329,5 +351,23 @@ export const PROJECTS: TProject[] = [
     description:
       'Public API generated from web scraping for get the values of the dollar ossued by Banco Nación de la Nación Argentina. Made with Express.js, TypeScript and Playwright.',
     gallery: [{ url_desktop: dba1, url_mobile: dba1Mobile }],
+  },
+  {
+    name: 'PulveSys',
+    date: new Date(2025, 3, 1),
+    description_es:
+      'Sistema web diseñado para la gestión eficiente de órdenes de pulverización agronómica, optimizando su planificación y seguimiento. En él, vas a poder generar las órdenes especificando el tratamiento a aplicar sobre el cultivo, los productos a utilizar con sus respectivas dosis por hectárea y, mediante un mapa, vas a poder dibujar y seleccionar los lotes de un campo donde se realizará dicha pulverización. PaaS',
+    url: 'https://pulvesys.com',
+    description:
+      'A web-based system designed for the efficient management of agricultural spraying orders, optimizing their planning and monitoring. You can generate orders specifying the crop treatment, the products to be used, and their respective doses per hectare. Using a map, you can draw and select the plots of a field where spraying will take place. PaaS.',
+    gallery: [
+      { url_desktop: pulvesys1, url_mobile: pulvesysMobile1 },
+      { url_desktop: pulvesys2, url_mobile: pulvesysMobile2 },
+      { url_desktop: pulvesys3, url_mobile: pulvesysMobile3 },
+      { url_desktop: pulvesys4, url_mobile: pulvesysMobile4 },
+      { url_desktop: pulvesys5, url_mobile: pulvesysMobile5 },
+      { url_desktop: pulvesys6, url_mobile: pulvesysMobile6 },
+      { url_desktop: pulvesys7, url_mobile: pulvesysMobile7 },
+    ],
   },
 ];

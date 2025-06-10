@@ -40,7 +40,7 @@ export default function Projects() {
         <Title>{LANG.PROJECTS.TITLE}</Title>
         <span className='opacity-75'>{LANG.PROJECTS.SUBTITLE}</span>
         <small className='opacity-75'>{LANG.PROJECTS.TOOLTIP}</small>
-        <ul className='flex flex-wrap justify-center gap-4'>
+        <ul className='flex flex-wrap justify-center gap-4 md:justify-start'>
           {PROJECTS.sort((a, b) => {
             return b.date.getTime() - a.date.getTime();
           }).map((project) => (
