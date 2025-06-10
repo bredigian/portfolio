@@ -13,6 +13,8 @@ import { Link } from 'react-scroll';
 import { ROUTES } from '@/const/routes';
 import { Switch } from '@/components/ui/switch';
 import { cn } from '@/lib/utils';
+import logoForDark from '@/assets/logo/logo-light.png';
+import logoForLight from '@/assets/logo/logo-dark.png';
 import { useLang } from '@/hooks/use-lang';
 import { useSearchParams } from 'react-router-dom';
 import { useTheme } from '@/hooks/use-theme';
@@ -47,22 +49,40 @@ export default function Navbar() {
     };
   }, []);
 
+  const logo = theme === 'dark' ? logoForDark : logoForLight;
+
   return (
     <header
       id='navbar'
       className={cn(
-        'sticky top-0 z-50 w-full px-4 py-8 text-primary',
+        'sticky top-0 z-50 w-full px-4 py-4 text-primary',
         !scrolled
           ? 'bg-primary-foreground'
           : 'bg-primary-foreground/90 backdrop-blur-sm',
       )}
     >
-      <nav className='w-full'>
+      <nav className='flex w-full items-center justify-center gap-12 md:gap-24'>
+        <Link
+          to='#home'
+          smooth
+          duration={500}
+          offset={-navHeight}
+          className='cursor-pointer'
+        >
+          <img
+            src={logo}
+            alt='Logo de gianlucabredice.dev'
+            className='size-12 object-contain md:size-16'
+          />
+        </Link>
         <ul className='flex items-center justify-center gap-4'>
-          {ROUTES.map((route) => (
+          {ROUTES.map((route, index) => (
             <li
               key={route.id}
-              className='text-sm first:hidden xsm:first:block sm:text-base'
+              className={cn(
+                'text-sm sm:text-base',
+                index === 2 && 'hidden sm:block',
+              )}
             >
               <Link
                 to={`#${route.id}`}

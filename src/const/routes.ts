@@ -6,11 +6,6 @@ type TRoute = {
 
 export const ROUTES: TRoute[] = [
   {
-    id: 'home',
-    name: 'Inicio',
-    name_eng: 'Home',
-  },
-  {
     id: 'projects',
     name: 'Proyectos',
     name_eng: 'Projects',
