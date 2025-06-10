@@ -2,12 +2,20 @@ import { TEducation } from '@/types/education.types';
 
 export const EDUCATION: TEducation[] = [
   {
+    title: 'Ingenieria en Sistemas',
+    engTitle: 'Systems Engineering',
+    placeName: 'UTN Facultad Regional La Plata',
+    engPlaceName: 'UTN La Plata Regional Faculty',
+    startDate: new Date(2025, 1, 1),
+    endDate: new Date(),
+  },
+  {
     title: 'Analista en TIC',
     engTitle: 'IT Analyst',
     placeName: 'Facultad de Informática UNLP',
     engPlaceName: 'Faculty of Informatics UNLP',
     startDate: new Date(2020, 0, 27),
-    endDate: new Date(),
+    endDate: new Date(2023, 5, 20),
   },
   {
     title: 'Desarrollo Web',

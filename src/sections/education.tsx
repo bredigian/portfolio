@@ -39,6 +39,11 @@ export default function Education() {
         ).map((item) => {
           const startDate = DateTime.fromJSDate(item?.startDate);
           const endDate = DateTime.fromJSDate(item?.endDate);
+          const today = DateTime.now();
+
+          const isHappening =
+            today.toLocaleString(DateTime.DATE_SHORT, { locale: 'es-AR' }) ===
+            endDate.toLocaleString(DateTime.DATE_SHORT, { locale: 'es-AR' });
 
           return (
             <li
@@ -55,21 +60,27 @@ export default function Education() {
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className='flex flex-col items-start gap-1'>
-                  {!item.placeName.includes('UNLP') ? (
+                  {!isHappening ? (
                     <span className='text-sm'>
-                      {startDate.monthShort?.concat(
-                        ' ',
-                        startDate.year.toString(),
-                      )}{' '}
+                      {startDate
+                        .setLocale(isEng ? 'en-US' : 'es-AR')
+                        .monthShort?.concat(
+                          ' ',
+                          startDate.year.toString(),
+                        )}{' '}
                       -{' '}
-                      {endDate.monthShort?.concat(' ', endDate.year.toString())}
+                      {endDate
+                        .setLocale(isEng ? 'en-US' : 'es-AR')
+                        .monthShort?.concat(' ', endDate.year.toString())}
                     </span>
                   ) : (
                     <span className='text-sm'>
-                      {startDate.monthShort?.concat(
-                        ' ',
-                        startDate.year.toString(),
-                      )}{' '}
+                      {startDate
+                        .setLocale(isEng ? 'en-US' : 'es-AR')
+                        .monthShort?.concat(
+                          ' ',
+                          startDate.year.toString(),
+                        )}{' '}
                       - Act
                     </span>
                   )}
