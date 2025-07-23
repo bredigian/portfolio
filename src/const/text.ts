@@ -53,7 +53,11 @@ export const TEXT = {
       CV_LINK: './Gianluca_Bredice_Vivarelli-CV_English.pdf',
     },
     FOOTER: {
-      TITLE: 'Made by Gianluca Bredice Vivarelli',
+      SUBTITLE: 'Do you want to know more about me?',
+      TITLE: 'Follow me on Instagram!',
+      DESCRIPTION:
+        'On my profile, I upload content related to the projects and work I do, showing demos and commenting on everything about them in first person.',
+      CONTACT_FORM_TITLE: 'Also you know contact me through this form',
     },
   },
   ESP: {
@@ -106,7 +110,12 @@ export const TEXT = {
       CV_LINK: './Gianluca_Bredice_Vivarelli-CV.pdf',
     },
     FOOTER: {
-      TITLE: 'Hecho por Gianluca Bredice Vivarelli',
+      SUBTITLE: '¿Querés saber más sobre mí?',
+      TITLE: '¡Seguime en Instagram!',
+      DESCRIPTION:
+        'En mi perfíl subo contenido relacionado a los proyectos y trabajos que realizo, mostrando demos y comentando en primera persona todo acerca de ellos.',
+      CONTACT_FORM_TITLE:
+        'También podés contactarme a través del siguiente formulario',
     },
   },
 };
