@@ -15,6 +15,7 @@ import { Switch } from '@/components/ui/switch';
 import { cn } from '@/lib/utils';
 import logoForDark from '@/assets/logo/logo-light.png';
 import logoForLight from '@/assets/logo/logo-dark.png';
+import { motion } from 'motion/react';
 import { useLang } from '@/hooks/use-lang';
 import { useSearchParams } from 'react-router-dom';
 import { useTheme } from '@/hooks/use-theme';
@@ -66,10 +67,14 @@ export default function Navbar() {
           to='#home'
           smooth
           duration={500}
-          offset={-navHeight}
+          offset={-60}
           className='cursor-pointer'
         >
-          <img
+          <motion.img
+            initial={{ opacity: 0, filter: 'blur(4px)' }}
+            whileInView={{ opacity: 100, filter: 'blur(0px)' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            viewport={{ once: true }}
             src={logo}
             alt='Logo de gianlucabredice.dev'
             className='size-12 object-contain md:size-16'
@@ -77,7 +82,15 @@ export default function Navbar() {
         </Link>
         <ul className='flex items-center justify-center gap-4'>
           {ROUTES.map((route, index) => (
-            <li
+            <motion.li
+              initial={{ opacity: 0, filter: 'blur(4px)' }}
+              whileInView={{ opacity: 100, filter: 'blur(0px)' }}
+              transition={{
+                delay: 0.25 + (index + 1) * 0.1,
+                duration: 0.5,
+                ease: 'easeOut',
+              }}
+              viewport={{ once: true }}
               key={route.id}
               className={cn(
                 'text-sm sm:text-base',
@@ -134,7 +147,7 @@ export default function Navbar() {
                   route.name_eng
                 )}
               </Link>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </nav>

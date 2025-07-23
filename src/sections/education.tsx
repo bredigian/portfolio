@@ -5,11 +5,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Title, TitleLetter } from '@/components/ui/title';
 import { useEffect, useState } from 'react';
 
 import { DateTime } from 'luxon';
 import { EDUCATION } from '@/const/education';
-import { Title } from '@/components/ui/title';
+import { motion } from 'motion/react';
 import { useLang } from '@/hooks/use-lang';
 
 export default function Education() {
@@ -30,13 +31,30 @@ export default function Education() {
       }}
     >
       <div className='flex flex-col items-center gap-4 text-center md:items-start md:text-start'>
-        <Title>{LANG.EDUCATION.TITLE}</Title>
-        <span className='opacity-75'>{LANG.EDUCATION.SUBTITLE}</span>
+        <Title>
+          {LANG.EDUCATION.TITLE.split('').map((l, idx) => (
+            <TitleLetter
+              key={`animated_education_title_${l}_${idx}`}
+              delay={(idx + 1) * 0.05}
+            >
+              {l}
+            </TitleLetter>
+          ))}
+        </Title>
+        <motion.span
+          initial={{ opacity: 0, filter: 'blur(4px)' }}
+          whileInView={{ opacity: 100, filter: 'blur(0px)' }}
+          transition={{ delay: 0.25, duration: 0.5, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className='opacity-75'
+        >
+          {LANG.EDUCATION.SUBTITLE}
+        </motion.span>
       </div>
       <ul className='grid w-full grid-cols-8 gap-4'>
         {EDUCATION.sort(
           (a, b) => (b.endDate?.getTime() as number) - a.endDate?.getTime(),
-        ).map((item) => {
+        ).map((item, idx) => {
           const startDate = DateTime.fromJSDate(item?.startDate);
           const endDate = DateTime.fromJSDate(item?.endDate);
           const today = DateTime.now();
@@ -46,7 +64,15 @@ export default function Education() {
             endDate.toLocaleString(DateTime.DATE_SHORT, { locale: 'es-AR' });
 
           return (
-            <li
+            <motion.li
+              initial={{ opacity: 0, filter: 'blur(4px)' }}
+              whileInView={{ opacity: 100, filter: 'blur(0px)' }}
+              transition={{
+                delay: 0.5 + (idx + 1) * 0.1,
+                duration: 0.5,
+                ease: 'easeOut',
+              }}
+              viewport={{ once: true }}
               key={item.title}
               className='col-span-full md:col-span-4 md:[&:nth-child(1)]:col-span-3 md:[&:nth-child(2)]:col-span-5  md:[&:nth-child(3)]:col-span-6 md:[&:nth-child(4)]:col-span-2'
             >
@@ -97,7 +123,7 @@ export default function Education() {
                   )}
                 </CardFooter>
               </Card>
-            </li>
+            </motion.li>
           );
         })}
       </ul>

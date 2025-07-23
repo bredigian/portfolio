@@ -3,6 +3,7 @@ import { Input } from '@/components/ui/input';
 import { ReloadIcon } from '@radix-ui/react-icons';
 import { TForm } from '@/types/form.types';
 import { Textarea } from '@/components/ui/textarea';
+import { motion } from 'motion/react';
 import { sendEmail } from '@/services/contact';
 import { toast } from 'sonner';
 import { useForm } from 'react-hook-form';
@@ -27,7 +28,11 @@ export default function ContactForm() {
   const { LANG } = useLang();
 
   return (
-    <form
+    <motion.form
+      initial={{ opacity: 0, filter: 'blur(4px)' }}
+      whileInView={{ opacity: 100, filter: 'blur(0px)' }}
+      transition={{ delay: 1.25, duration: 0.5, ease: 'easeOut' }}
+      viewport={{ once: true }}
       onSubmit={handleSubmit(onSubmit)}
       className='flex w-full max-w-[420px] flex-col items-center gap-4 md:items-end'
     >
@@ -99,6 +104,6 @@ export default function ContactForm() {
           LANG.ABOUT.FORM.SUBMIT
         )}
       </Button>
-    </form>
+    </motion.form>
   );
 }

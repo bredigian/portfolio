@@ -1,6 +1,7 @@
+import { Title, TitleLetter } from '@/components/ui/title';
+
 import Autoplay from 'embla-carousel-autoplay';
 import { TITLES } from '@/const/titles';
-import { Title } from '@/components/ui/title';
 import useEmblaCarousel from 'embla-carousel-react';
 
 export default function TitleSlider() {
@@ -19,7 +20,14 @@ export default function TitleSlider() {
               className='embla__slide min-h-0 shrink-0 grow basis-full pt-1'
             >
               <Title className='w-min select-none sm:w-fit md:w-min lg:w-fit'>
-                {title}
+                {title.split('').map((l, idx) => (
+                  <TitleLetter
+                    key={`title_letter_${l}_${idx}`}
+                    delay={0.25 + (idx + 1) * 0.05}
+                  >
+                    {l}
+                  </TitleLetter>
+                ))}
               </Title>
             </div>
           ))}
