@@ -39,7 +39,7 @@ export default function Projects() {
       <div className='flex flex-col items-center gap-4 px-8 pt-8 text-center md:items-start md:text-start'>
         <Title>{LANG.PROJECTS.TITLE}</Title>
         <span className='opacity-75'>{LANG.PROJECTS.SUBTITLE}</span>
-        <small className='opacity-75'>{LANG.PROJECTS.TOOLTIP}</small>
+        <small className='mt-4 opacity-75'>{LANG.PROJECTS.TOOLTIP}</small>
         <ul className='flex flex-wrap justify-center gap-4 md:justify-start'>
           {PROJECTS.sort((a, b) => {
             return b.date.getTime() - a.date.getTime();
@@ -56,7 +56,7 @@ export default function Projects() {
             </li>
           ))}
         </ul>
-        <Card>
+        <Card className='mt-4'>
           <CardHeader className='flex flex-col gap-4'>
             <CardTitle className='flex w-full items-center justify-between gap-4'>
               <span className=''>{active?.name}</span>

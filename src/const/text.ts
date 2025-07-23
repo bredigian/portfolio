@@ -78,7 +78,8 @@ export const TEXT = {
     },
     EDUCATION: {
       TITLE: 'Educación',
-      SUBTITLE: 'Formación que realicé para llegar a quien soy hoy en día.',
+      SUBTITLE:
+        'Estudios que hice y/o sigo haciendo para llegar a quien soy hoy en día.',
     },
     SKILLS: {
       TITLE: 'Habilidades',

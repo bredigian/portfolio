@@ -35,14 +35,14 @@ export default function Skills() {
   return (
     <section
       id='#skills'
-      className='flex flex-col items-center gap-4 p-8 text-primary md:items-end'
+      className='flex flex-col items-center gap-8 p-8 text-primary md:items-end'
       style={{
         minHeight: `${100 - (100 - height)}vh`,
       }}
     >
       <div className='flex flex-col items-center gap-4 text-center md:items-end md:text-end'>
         <Title>{LANG.SKILLS.TITLE}</Title>
-        <span className='opacity-75 lg:text-lg'>{LANG.SKILLS.SUBTITLE}</span>
+        <span className='opacity-75'>{LANG.SKILLS.SUBTITLE}</span>
       </div>
       <Masonry
         items={Object.entries(SKILLS_GROUPED)}

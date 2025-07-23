@@ -24,14 +24,14 @@ export default function Education() {
   return (
     <section
       id='#education'
-      className='flex flex-col items-center gap-4 p-8 text-primary md:w-full md:items-start'
+      className='flex flex-col items-center gap-8 p-8 text-primary md:w-full md:items-start'
       style={{
         minHeight: `${100 - (100 - height)}vh`,
       }}
     >
       <div className='flex flex-col items-center gap-4 text-center md:items-start md:text-start'>
         <Title>{LANG.EDUCATION.TITLE}</Title>
-        <span className='opacity-75 lg:text-lg'>{LANG.EDUCATION.SUBTITLE}</span>
+        <span className='opacity-75'>{LANG.EDUCATION.SUBTITLE}</span>
       </div>
       <ul className='grid w-full grid-cols-8 gap-4'>
         {EDUCATION.sort(
