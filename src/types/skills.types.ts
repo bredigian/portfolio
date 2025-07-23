@@ -1,9 +1,16 @@
 import { IconType } from 'react-icons';
 
-type TSkillType = 'frontend' | 'backend' | 'database' | 'others';
+export type TSkillType =
+  | 'Frontend'
+  | 'Backend'
+  | 'Database'
+  | 'Infrastructure'
+  | 'DevOps'
+  | 'Control'
+  | 'Design';
 
 export type TSkill = {
   name: string;
   icon: IconType;
-  type: TSkillType;
+  category: TSkillType;
 };
