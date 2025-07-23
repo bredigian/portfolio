@@ -30,7 +30,7 @@ export default function Skills() {
     if (nav) setHeight(nav.offsetHeight);
   }, []);
 
-  const { LANG } = useLang();
+  const { LANG, isEng } = useLang();
 
   return (
     <section
@@ -54,7 +54,11 @@ export default function Skills() {
         render={([category, skills]) => (
           <Card key={category} className='h-full'>
             <CardHeader>
-              <CardTitle>{category}</CardTitle>
+              <CardTitle>
+                {isEng
+                  ? category
+                  : skills.find((s) => s.category === category)?.category_es}
+              </CardTitle>
               <CardDescription hidden></CardDescription>
             </CardHeader>
             <CardContent>
@@ -76,7 +80,7 @@ export default function Skills() {
         )}
         placeholder={
           <div>
-            <ReloadIcon className='size-4- animate-spin' />
+            <ReloadIcon className='size-4 animate-spin' />
           </div>
         }
       />
