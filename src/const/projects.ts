@@ -9,6 +9,8 @@ import caMobile2 from '@/assets/screenshots/casatomada/mobile/ca-2.jpg';
 import caMobile3 from '@/assets/screenshots/casatomada/mobile/ca-3.jpg';
 import caMobile4 from '@/assets/screenshots/casatomada/mobile/ca-4.jpg';
 import caMobile5 from '@/assets/screenshots/casatomada/mobile/ca-5.jpg';
+import cuandoLlegaMiMicro1 from '@/assets/screenshots/cuando-llega-mi-micro/clmm-1.png';
+import cuandoLlegaMiMicroMobile1 from '@/assets/screenshots/cuando-llega-mi-micro/mobile/clmm-1.png';
 import dba1 from '@/assets/screenshots/dolar-bna-api/dba-1.png';
 import dba1Mobile from '@/assets/screenshots/dolar-bna-api/mobile/dba-1.png';
 import il1 from '@/assets/screenshots/iluminarte/il-1.jpg';
@@ -19,6 +21,14 @@ import ilMobile1 from '@/assets/screenshots/iluminarte/mobile/il-1.jpg';
 import ilMobile2 from '@/assets/screenshots/iluminarte/mobile/il-2.jpg';
 import ilMobile3 from '@/assets/screenshots/iluminarte/mobile/il-3.jpg';
 import ilMobile4 from '@/assets/screenshots/iluminarte/mobile/il-4.jpg';
+import luzVerdeChillar1 from '@/assets/screenshots/luz-verde-chillar/luzverdechillar-1.png';
+import luzVerdeChillar2 from '@/assets/screenshots/luz-verde-chillar/luzverdechillar-2.png';
+import luzVerdeChillar3 from '@/assets/screenshots/luz-verde-chillar/luzverdechillar-3.png';
+import luzVerdeChillar4 from '@/assets/screenshots/luz-verde-chillar/luzverdechillar-4.png';
+import luzVerdeChillarMobile1 from '@/assets/screenshots/luz-verde-chillar/mobile/luzverdechillar-1.png';
+import luzVerdeChillarMobile2 from '@/assets/screenshots/luz-verde-chillar/mobile/luzverdechillar-2.png';
+import luzVerdeChillarMobile3 from '@/assets/screenshots/luz-verde-chillar/mobile/luzverdechillar-3.png';
+import luzVerdeChillarMobile4 from '@/assets/screenshots/luz-verde-chillar/mobile/luzverdechillar-4.png';
 import mbpeluqueriaDesktopLight1 from '@/assets/screenshots/mbpeluqueria/desktop-light-1.png';
 import mbpeluqueriaDesktopLight10 from '@/assets/screenshots/mbpeluqueria/desktop-light-10.png';
 import mbpeluqueriaDesktopLight11 from '@/assets/screenshots/mbpeluqueria/desktop-light-11.png';
@@ -101,20 +111,6 @@ import sgMobile6 from '@/assets/screenshots/sgpharma/mobile/sg-6.jpg';
 import sgMobile7 from '@/assets/screenshots/sgpharma/mobile/sg-7.jpg';
 import sgMobile8 from '@/assets/screenshots/sgpharma/mobile/sg-8.jpg';
 import sgMobile9 from '@/assets/screenshots/sgpharma/mobile/sg-9.jpg';
-
-//Casatomada Images
-
-//Dolar BNA API Images
-
-//Iluminarte Images
-
-//MB Peluqueria Images
-
-//Megallon Images
-
-//SG Pharma Images
-
-//PulveSys Images
 
 export const PROJECTS: TProject[] = [
   {
@@ -368,6 +364,36 @@ export const PROJECTS: TProject[] = [
       { url_desktop: pulvesys5, url_mobile: pulvesysMobile5 },
       { url_desktop: pulvesys6, url_mobile: pulvesysMobile6 },
       { url_desktop: pulvesys7, url_mobile: pulvesysMobile7 },
+    ],
+  },
+  {
+    name: 'Luz Verde Chillar',
+    description_es:
+      'Sistema administrativo dedicado a la gestión de presupuestos para la pyme Luz Verde Chillar, de Yaco Mehring.',
+    description:
+      'A system dedicated to budgets managing for Luz Verde Chillar pyme, from Yaco Mehring.',
+    date: new Date(2025, 4, 1),
+    url: 'https://luzverdechillar.vercel.app',
+    gallery: [
+      { url_desktop: luzVerdeChillar1, url_mobile: luzVerdeChillarMobile1 },
+      { url_desktop: luzVerdeChillar2, url_mobile: luzVerdeChillarMobile2 },
+      { url_desktop: luzVerdeChillar3, url_mobile: luzVerdeChillarMobile3 },
+      { url_desktop: luzVerdeChillar4, url_mobile: luzVerdeChillarMobile4 },
+    ],
+  },
+  {
+    name: '¿Cuando Llega Mi Micro? - Telegram Bot',
+    description_es:
+      'Bot de telegram dedicado a la configuración de notificaciones personalizadas acerca de los próximos arribos a las paradas de los micros de la Ciudad de La Plata.',
+    description:
+      'A Telegram bot dedicated to setting custom notifications about next arrives to the bus stops from La Plata.',
+    date: new Date(2025, 6, 20),
+    url: 'https://t.me/MicroArribosBot',
+    gallery: [
+      {
+        url_desktop: cuandoLlegaMiMicro1,
+        url_mobile: cuandoLlegaMiMicroMobile1,
+      },
     ],
   },
 ];
